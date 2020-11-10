@@ -20,7 +20,14 @@ We tried to change the following parameters from the baseline model
 * LR Scheduler - We tried 2 different schedulers. Step LR and Exponential LR. For Exponential LR we tried 2 different decay factors: 0.97 and 0.99
 * Effect of changing the train-validation-split was also studied. Effect of varying the training data on different optimizers and lr schedulers is reported
 * Weight Decay - Effect on training process by varying weight decay
+* Effect of varying the dropout probability on model generalization
 * Loss function - Instead of simple average of dice loss and inverse dice loss, we took weighted average of dice loss and inverted dice loss. Results on different weights are reported
 * Mode of upsampling - In the upsampling layer of the unet, upsampling can be done with 2 methods: conv transpose 2d and bilinear interpolation + 1x1 convolution. Effect of both the method on model learning is studied and reported
 * Effect of using L1 and L1L2 regularizers is also studies<br>
 
+# Code breakage
+The main script which needs to be called is train.py. It accepts various command line parameters, whose default values can be found in [utility/parameters.py](https://github.com/RishabhDahale/Right-Ventricle-Segmentation-of-Heart/blob/main/utility/parameters.py).<br>
+Another method to give the input parameters is through a config file. Config file for the baseline model is present in **configurations** folder. To run the script with config file as input use the command
+'''
+python train.py <path_to_config_file>
+'''
