@@ -28,6 +28,6 @@ We tried to change the following parameters from the baseline model
 # Code breakage
 The main script which needs to be called is train.py. It accepts various command line parameters, whose default values can be found in [utility/parameters.py](https://github.com/RishabhDahale/Right-Ventricle-Segmentation-of-Heart/blob/main/utility/parameters.py).<br>
 Another method to give the input parameters is through a config file. Config file for the baseline model is present in **configurations** folder. To run the script with config file as input use the command
-'''
+```
 python train.py <path_to_config_file>
-'''
+```
